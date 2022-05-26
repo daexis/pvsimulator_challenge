@@ -8,14 +8,17 @@ This project is a challenge to simulate simple PV systems. It has 3 main parts:
 - broker
 - pv simulator
 
-1. Meter
+1. Meter.
+
 Its simple application to simulate power meter of consumer. 
 Meter application makes simulation of power consumption of consumer and send it to broker.
 
-2. Broker
+2. Broker.
+
 I'm  using RabbitMQ to communicate with other applications. It received messages from meter(s) and send them to pv simulator(s).
 
-3. PV simulator
+3. PV simulator.
+
 There is simple simulator of PV system. It receives meter's value from broker and simulate PV system. All information about PV system is stored in output file.
 
 **How to run:**
