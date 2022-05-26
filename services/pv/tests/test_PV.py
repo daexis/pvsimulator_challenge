@@ -7,6 +7,9 @@ import logging
 
 
 class testPv(unittest.TestCase):
+    """
+    Class for testing PV Simulator
+    """
     _broker_host = 'rabbitmq'
     _broker_port = '5672'
     _broker_queue = 'meter_simulator_test'
@@ -22,6 +25,10 @@ class testPv(unittest.TestCase):
     _environment_pv = "TEST"
 
     def test_connection(self):
+        """
+        Test connection to broker.
+        :return:
+        """
         try:
             Pv._connect_broker(self)
             self.assertTrue(True)
@@ -29,6 +36,10 @@ class testPv(unittest.TestCase):
             self.assertTrue(False)
 
     def test_generating(self):
+        """
+        Test generating pv simulator's value.
+        :return:
+        """
         try:
             Pv._generate_pv_value(self)
             self.assertTrue(True)
@@ -36,6 +47,10 @@ class testPv(unittest.TestCase):
             self.assertTrue(False)
 
     def test_writing(self):
+        """
+        Test writing pv simulator's value to output file.
+        :return:
+        """
         try:
             data_record = {
                 "timestampt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),

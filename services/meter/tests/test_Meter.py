@@ -5,6 +5,9 @@ import logging
 
 
 class testMeter(unittest.TestCase):
+    """
+    Class for testing Meter.
+    """
     _broker_host = 'rabbitmq'
     _broker_port = '5672'
     _broker_queue = 'meter_simulator_test'
@@ -18,6 +21,10 @@ class testMeter(unittest.TestCase):
     _environment_pv = "TEST"
 
     def test_connection(self):
+        """
+        Test connection to broker.
+        :return:
+        """
         try:
             Meter._connect_broker(self)
             self.assertTrue(True)
@@ -25,6 +32,10 @@ class testMeter(unittest.TestCase):
             self.assertTrue(False)
 
     def test_publishing(self):
+        """
+        Test publishing meter's value to broker.
+        :return:
+        """
         try:
             channel = Meter._connect_broker(self)
             Meter._publish_meter_to_broker(self, channel, "1234")
@@ -33,6 +44,10 @@ class testMeter(unittest.TestCase):
             self.assertTrue(False)
 
     def test_generating(self):
+        """
+        Test generating meter's value.
+        :return:
+        """
         try:
             Meter._generate_meter(self)
             self.assertTrue(True)
