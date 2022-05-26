@@ -19,7 +19,7 @@ I'm  using RabbitMQ to communicate with other applications. It received messages
 
 3. PV simulator.
 
-There is simple simulator of PV system. It receives meter's value from broker and simulate PV system. All information about PV system is stored in output file.
+There is simple simulator of PV system. It receives meter's value from broker and simulate PV system. All information from PV system stored to output file.
 
 **How to run:**
 
