@@ -1,0 +1,64 @@
+version: '3.9'
+services:
+  meter:
+    container_name: meter
+    hostname: meter
+    build:
+      context: ./services/meter
+      dockerfile: Dockerfile
+    volumes:
+      - './data/log:/usr/src/log'
+    environment:
+      - ENVIRONMENT_PV=DEV
+      - BROKER_HOST=rabbitmq
+      - BROKER_PORT=5672
+      - BROKER_QUEUE=meter_simulator
+      - BROKER_USERNAME=guest
+      - BROKER_PASSWORD=guest
+      - PV_MIN=0
+      - PV_MAX=9000
+      - PV_DELAY=2
+      - BROKER_INITIAL_DELAY=20
+      - LOGFILE=./log/meter.log
+    depends_on:
+      - rabbitmq
+    links:
+      - rabbitmq
+  pv:
+    container_name: pv
+    hostname: pv
+    build:
+      context: ./services/pv
+      dockerfile: Dockerfile
+    volumes:
+      - './data/log:/usr/src/log'
+    environment:
+      - ENVIRONMENT_PV=DEV
+      - BROKER_HOST=rabbitmq
+      - BROKER_PORT=5672
+      - BROKER_QUEUE=meter_simulator
+      - BROKER_USERNAME=guest
+      - BROKER_PASSWORD=guest
+      - OUTPUT_FILE=./log/output.csv
+      - DELIMITER=;
+      - PV_MIN=0
+      - PV_MAX=9000
+      - BROKER_INITIAL_DELAY=20
+      - LOGFILE=./log/pv.log
+    depends_on:
+      - rabbitmq
+    links:
+      - rabbitmq
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - 5672:5672
+    volumes:
+      - ./data/rabbitmq:/var/lib/rabbitmq
+
+    
