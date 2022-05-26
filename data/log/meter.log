@@ -1,0 +1,11 @@
+2022-05-26 09:19:45 AM Meter: Connecting to broker: rabbitmq
+2022-05-26 09:19:45 AM Meter: Connecting to broker: rabbitmq
+2022-05-26 09:19:45 AM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-05-26 09:19:45 AM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.4', 46876), raddr=('172.18.0.2', 5672)>
+2022-05-26 09:19:45 AM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-05-26 09:19:45 AM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-05-26 09:19:45 AM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-05-26 09:19:45 AM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-05-26 09:19:45 AM Created channel=1
+2022-05-26 09:19:45 AM Meter: Publishing meter to broker: 6959
+2022-05-26 09:19:47 AM Meter: Publishing meter to broker: 8214
