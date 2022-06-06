@@ -12,10 +12,12 @@ class Pv:
     Should provide broker's host, port, queue, username, password.
     """
 
-    def __init__(self, broker_host: str, broker_port: int, broker_queue: str, broker_username: str,
+    def __init__(self, broker_host: str, broker_port: int, broker_queue: str,
+                 broker_username: str,
                  broker_password: str,
                  pv_min: int, pv_max: int,
-                 output_file: str, delimiter: str, logfile: str, environment_pv: str):
+                 output_file: str, delimiter: str, logfile: str,
+                 environment_pv: str):
         self._logfile = logfile
         self._broker_host = broker_host
         self._broker_port = broker_port
@@ -26,10 +28,12 @@ class Pv:
         self._pv_max = pv_max
         self._output_file = output_file
         self._delimiter = delimiter
-        self._credentials = pika.PlainCredentials(self._broker_username, self._broker_password)
+        self._credentials = pika.PlainCredentials(self._broker_username,
+                                                  self._broker_password)
         self._environment_pv = environment_pv
         logging.basicConfig(filename=logfile, filemode="a", level=logging.INFO,
-                            format='%(asctime)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S %p')
+                            format='%(asctime)s %(message)s',
+                            datefmt='%Y-%m-%d %H:%M:%S %p')
 
     def _connect_broker(self):
         """
@@ -39,7 +43,9 @@ class Pv:
         logging.info("PV: Connecting to broker")
         try:
             self._connection = pika.BlockingConnection(
-                pika.ConnectionParameters(self._broker_host, port=self._broker_port, credentials=self._credentials))
+                pika.ConnectionParameters(self._broker_host,
+                                          port=self._broker_port,
+                                          credentials=self._credentials))
             channel = self._connection.channel()
             channel.basic_qos(prefetch_count=1)
             channel.queue_declare(queue=self._broker_queue, durable=True)
@@ -66,7 +72,8 @@ class Pv:
 
     def _get_value_from_broker(self, channel: pika.channel.Channel):
         try:
-            channel.basic_consume(queue=self._broker_queue, on_message_callback=self._callback)
+            channel.basic_consume(queue=self._broker_queue,
+                                  on_message_callback=self._callback)
             channel.start_consuming()
         except pika.exceptions.ConnectionClosedByBroker as e:
             logging.error("PV: Connection to broker closed by broker: %s", e)
