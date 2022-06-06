@@ -8,7 +8,8 @@ import pika
 
 class Pv:
     """
-    Class receiving consumer's meter value from a broker, generating PV value and writing to a file.
+    Class receiving consumer's meter value from a broker, generating PV value
+    and writing to a file.
     Should provide broker's host, port, queue, username, password.
     """
 

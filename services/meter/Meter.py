@@ -7,8 +7,8 @@ import pika
 
 class Meter:
     """
-    Meter class simulates consumer meter. Class generates random value between pv_min and pv_max (Watt)
-    and publish value to broker.
+    Meter class simulates consumer meter. Class generates random value between
+    pv_min and pv_max (Watt) and publish value to broker.
     Should provide broker's host, port, queue, username, password.
     Class publishes meter's value every pv_delay seconds.
     """
