@@ -18,7 +18,6 @@ services:
       - PV_MIN=0
       - PV_MAX=9000
       - PV_DELAY=2
-      - BROKER_INITIAL_DELAY=20
       - LOGFILE=./log/meter.log
     depends_on:
       - rabbitmq
@@ -43,7 +42,6 @@ services:
       - DELIMITER=;
       - PV_MIN=0
       - PV_MAX=9000
-      - BROKER_INITIAL_DELAY=20
       - LOGFILE=./log/pv.log
     depends_on:
       - rabbitmq

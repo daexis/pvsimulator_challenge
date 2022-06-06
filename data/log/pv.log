@@ -1,13 +1,96 @@
-2022-05-26 09:19:45 AM PV: Starting PV
-2022-05-26 09:19:45 AM PV: Connecting to broker
-2022-05-26 09:19:45 AM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
-2022-05-26 09:19:45 AM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.3', 39230), raddr=('172.18.0.2', 5672)>
-2022-05-26 09:19:45 AM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f960d75c3d0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f960d75c3d0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
-2022-05-26 09:19:45 AM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f960d75c3d0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f960d75c3d0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f960d75c3d0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM Created channel=1
-2022-05-26 09:19:45 AM PV: Received message b'6959'
-2022-05-26 09:19:45 AM PV: Writing data record {'timestampt': '2022-05-26 09:19:45', 'meter_value': 6959, 'pv_value': 1293, 'sum': 8252} to file
-2022-05-26 09:19:47 AM PV: Received message b'8214'
-2022-05-26 09:19:47 AM PV: Writing data record {'timestampt': '2022-05-26 09:19:47', 'meter_value': 8214, 'pv_value': 7868, 'sum': 16082} to file
+2022-06-06 13:23:51 PM PV: Starting PV
+2022-06-06 13:23:51 PM PV: Connecting to broker
+2022-06-06 13:23:51 PM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-06-06 13:23:51 PM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.4', 47680), raddr=('172.18.0.2', 5672)>
+2022-06-06 13:23:51 PM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa735fae5e0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa735fae5e0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-06-06 13:23:51 PM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa735fae5e0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:51 PM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa735fae5e0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:51 PM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa735fae5e0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:51 PM Created channel=1
+2022-06-06 13:23:51 PM PV: Received message b'704'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 704, 'pv_value': 916, 'sum': 1620} to file
+2022-06-06 13:23:51 PM PV: Received message b'2097'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 2097, 'pv_value': 8033, 'sum': 10130} to file
+2022-06-06 13:23:51 PM PV: Received message b'904'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 904, 'pv_value': 8251, 'sum': 9155} to file
+2022-06-06 13:23:51 PM PV: Received message b'8314'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 8314, 'pv_value': 3787, 'sum': 12101} to file
+2022-06-06 13:23:51 PM PV: Received message b'3045'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 3045, 'pv_value': 6984, 'sum': 10029} to file
+2022-06-06 13:23:51 PM PV: Received message b'7061'
+2022-06-06 13:23:51 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:51', 'meter_value': 7061, 'pv_value': 4236, 'sum': 11297} to file
+2022-06-06 13:23:52 PM PV: Received message b'1155'
+2022-06-06 13:23:52 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:52', 'meter_value': 1155, 'pv_value': 1879, 'sum': 3034} to file
+2022-06-06 13:23:54 PM PV: Received message b'5039'
+2022-06-06 13:23:54 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:54', 'meter_value': 5039, 'pv_value': 6923, 'sum': 11962} to file
+2022-06-06 13:23:56 PM PV: Received message b'7370'
+2022-06-06 13:23:56 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:56', 'meter_value': 7370, 'pv_value': 2370, 'sum': 9740} to file
+2022-06-06 13:23:58 PM PV: Received message b'8623'
+2022-06-06 13:23:58 PM PV: Writing data record {'timestampt': '2022-06-06 13:23:58', 'meter_value': 8623, 'pv_value': 8086, 'sum': 16709} to file
+2022-06-06 13:24:00 PM PV: Received message b'1984'
+2022-06-06 13:24:00 PM PV: Writing data record {'timestampt': '2022-06-06 13:24:00', 'meter_value': 1984, 'pv_value': 4937, 'sum': 6921} to file
+2022-06-06 13:31:34 PM PV: Starting PV
+2022-06-06 13:31:34 PM PV: Connecting to broker
+2022-06-06 13:31:34 PM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-06-06 13:31:34 PM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.4', 48774), raddr=('172.18.0.2', 5672)>
+2022-06-06 13:31:34 PM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa2e88fa640>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa2e88fa640> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-06-06 13:31:34 PM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa2e88fa640> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa2e88fa640> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fa2e88fa640> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM Created channel=1
+2022-06-06 13:31:34 PM PV: Received message b'2027'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 2027, 'pv_value': 1133, 'sum': 3160} to file
+2022-06-06 13:31:34 PM PV: Received message b'1780'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 1780, 'pv_value': 7698, 'sum': 9478} to file
+2022-06-06 13:31:34 PM PV: Received message b'6483'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 6483, 'pv_value': 7737, 'sum': 14220} to file
+2022-06-06 13:31:34 PM PV: Received message b'8192'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 8192, 'pv_value': 1552, 'sum': 9744} to file
+2022-06-06 13:31:34 PM PV: Received message b'6074'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 6074, 'pv_value': 3612, 'sum': 9686} to file
+2022-06-06 13:31:34 PM PV: Received message b'3435'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 3435, 'pv_value': 1912, 'sum': 5347} to file
+2022-06-06 13:31:34 PM PV: Received message b'500'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 500, 'pv_value': 3314, 'sum': 3814} to file
+2022-06-06 13:31:34 PM PV: Received message b'677'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 677, 'pv_value': 294, 'sum': 971} to file
+2022-06-06 13:31:34 PM PV: Received message b'6049'
+2022-06-06 13:31:34 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:34', 'meter_value': 6049, 'pv_value': 4889, 'sum': 10938} to file
+2022-06-06 13:31:36 PM PV: Received message b'7619'
+2022-06-06 13:31:36 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:36', 'meter_value': 7619, 'pv_value': 8245, 'sum': 15864} to file
+2022-06-06 13:31:38 PM PV: Received message b'109'
+2022-06-06 13:31:38 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:38', 'meter_value': 109, 'pv_value': 7429, 'sum': 7538} to file
+2022-06-06 13:31:40 PM PV: Received message b'3273'
+2022-06-06 13:31:40 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:40', 'meter_value': 3273, 'pv_value': 5058, 'sum': 8331} to file
+2022-06-06 13:31:42 PM PV: Received message b'1309'
+2022-06-06 13:31:42 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:42', 'meter_value': 1309, 'pv_value': 6044, 'sum': 7353} to file
+2022-06-06 13:31:44 PM PV: Received message b'356'
+2022-06-06 13:31:44 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:44', 'meter_value': 356, 'pv_value': 3353, 'sum': 3709} to file
+2022-06-06 13:31:46 PM PV: Received message b'4964'
+2022-06-06 13:31:46 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:46', 'meter_value': 4964, 'pv_value': 5720, 'sum': 10684} to file
+2022-06-06 13:31:48 PM PV: Received message b'2938'
+2022-06-06 13:31:48 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:48', 'meter_value': 2938, 'pv_value': 7020, 'sum': 9958} to file
+2022-06-06 13:31:50 PM PV: Received message b'2383'
+2022-06-06 13:31:50 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:50', 'meter_value': 2383, 'pv_value': 5186, 'sum': 7569} to file
+2022-06-06 13:31:52 PM PV: Received message b'1777'
+2022-06-06 13:31:52 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:52', 'meter_value': 1777, 'pv_value': 2853, 'sum': 4630} to file
+2022-06-06 13:31:54 PM PV: Received message b'3646'
+2022-06-06 13:31:54 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:54', 'meter_value': 3646, 'pv_value': 7567, 'sum': 11213} to file
+2022-06-06 13:31:56 PM PV: Received message b'5633'
+2022-06-06 13:31:56 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:56', 'meter_value': 5633, 'pv_value': 1189, 'sum': 6822} to file
+2022-06-06 13:31:58 PM PV: Received message b'4807'
+2022-06-06 13:31:58 PM PV: Writing data record {'timestampt': '2022-06-06 13:31:58', 'meter_value': 4807, 'pv_value': 5759, 'sum': 10566} to file
+2022-06-06 13:32:00 PM PV: Received message b'2752'
+2022-06-06 13:32:00 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:00', 'meter_value': 2752, 'pv_value': 8669, 'sum': 11421} to file
+2022-06-06 13:32:02 PM PV: Received message b'8068'
+2022-06-06 13:32:02 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:02', 'meter_value': 8068, 'pv_value': 5568, 'sum': 13636} to file
+2022-06-06 13:32:04 PM PV: Received message b'6361'
+2022-06-06 13:32:04 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:04', 'meter_value': 6361, 'pv_value': 4363, 'sum': 10724} to file
+2022-06-06 13:32:06 PM PV: Received message b'2211'
+2022-06-06 13:32:06 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:06', 'meter_value': 2211, 'pv_value': 2223, 'sum': 4434} to file
+2022-06-06 13:32:08 PM PV: Received message b'3084'
+2022-06-06 13:32:08 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:08', 'meter_value': 3084, 'pv_value': 6661, 'sum': 9745} to file
+2022-06-06 13:32:10 PM PV: Received message b'5366'
+2022-06-06 13:32:10 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:10', 'meter_value': 5366, 'pv_value': 4485, 'sum': 9851} to file
+2022-06-06 13:32:12 PM PV: Received message b'6063'
+2022-06-06 13:32:12 PM PV: Writing data record {'timestampt': '2022-06-06 13:32:12', 'meter_value': 6063, 'pv_value': 5664, 'sum': 11727} to file

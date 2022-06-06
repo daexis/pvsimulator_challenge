@@ -1,11 +1,66 @@
-2022-05-26 09:19:45 AM Meter: Connecting to broker: rabbitmq
-2022-05-26 09:19:45 AM Meter: Connecting to broker: rabbitmq
-2022-05-26 09:19:45 AM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
-2022-05-26 09:19:45 AM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.4', 46876), raddr=('172.18.0.2', 5672)>
-2022-05-26 09:19:45 AM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
-2022-05-26 09:19:45 AM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f2666b93820> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
-2022-05-26 09:19:45 AM Created channel=1
-2022-05-26 09:19:45 AM Meter: Publishing meter to broker: 6959
-2022-05-26 09:19:47 AM Meter: Publishing meter to broker: 8214
+2022-06-06 13:23:40 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:23:40 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:23:40 PM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-06-06 13:23:40 PM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.3', 35246), raddr=('172.18.0.2', 5672)>
+2022-06-06 13:23:40 PM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7ff0c8544880>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7ff0c8544880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-06-06 13:23:40 PM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7ff0c8544880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:40 PM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7ff0c8544880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:40 PM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7ff0c8544880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:23:40 PM Created channel=1
+2022-06-06 13:23:40 PM Meter: Publishing meter to broker: 704
+2022-06-06 13:23:42 PM Meter: Publishing meter to broker: 2097
+2022-06-06 13:23:44 PM Meter: Publishing meter to broker: 904
+2022-06-06 13:23:46 PM Meter: Publishing meter to broker: 8314
+2022-06-06 13:23:48 PM Meter: Publishing meter to broker: 3045
+2022-06-06 13:23:50 PM Meter: Publishing meter to broker: 7061
+2022-06-06 13:23:52 PM Meter: Publishing meter to broker: 1155
+2022-06-06 13:23:54 PM Meter: Publishing meter to broker: 5039
+2022-06-06 13:23:56 PM Meter: Publishing meter to broker: 7370
+2022-06-06 13:23:58 PM Meter: Publishing meter to broker: 8623
+2022-06-06 13:24:00 PM Meter: Publishing meter to broker: 1984
+2022-06-06 13:29:38 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:29:38 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:29:38 PM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-06-06 13:29:38 PM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.3', 35608), raddr=('172.18.0.2', 5672)>
+2022-06-06 13:29:38 PM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fc83c691880>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fc83c691880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-06-06 13:29:38 PM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fc83c691880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:29:38 PM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fc83c691880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:29:38 PM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7fc83c691880> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:29:38 PM Created channel=1
+2022-06-06 13:29:38 PM Meter: Publishing meter to broker: 2027
+2022-06-06 13:29:40 PM Meter: Publishing meter to broker: 1780
+2022-06-06 13:29:42 PM Meter: Publishing meter to broker: 6483
+2022-06-06 13:29:44 PM Meter: Publishing meter to broker: 8192
+2022-06-06 13:29:46 PM Meter: Publishing meter to broker: 6074
+2022-06-06 13:29:48 PM Meter: Publishing meter to broker: 3435
+2022-06-06 13:29:50 PM Meter: Publishing meter to broker: 500
+2022-06-06 13:29:52 PM Meter: Publishing meter to broker: 677
+2022-06-06 13:31:34 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:31:34 PM Meter: Connecting to broker: rabbitmq
+2022-06-06 13:31:34 PM Pika version 1.2.1 connecting to ('172.18.0.2', 5672)
+2022-06-06 13:31:34 PM Socket connected: <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.18.0.3', 36348), raddr=('172.18.0.2', 5672)>
+2022-06-06 13:31:34 PM Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f1e79ee5a90>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f1e79ee5a90> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>).
+2022-06-06 13:31:34 PM AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f1e79ee5a90> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f1e79ee5a90> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f1e79ee5a90> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>
+2022-06-06 13:31:34 PM Created channel=1
+2022-06-06 13:31:34 PM Meter: Publishing meter to broker: 6049
+2022-06-06 13:31:36 PM Meter: Publishing meter to broker: 7619
+2022-06-06 13:31:38 PM Meter: Publishing meter to broker: 109
+2022-06-06 13:31:40 PM Meter: Publishing meter to broker: 3273
+2022-06-06 13:31:42 PM Meter: Publishing meter to broker: 1309
+2022-06-06 13:31:44 PM Meter: Publishing meter to broker: 356
+2022-06-06 13:31:46 PM Meter: Publishing meter to broker: 4964
+2022-06-06 13:31:48 PM Meter: Publishing meter to broker: 2938
+2022-06-06 13:31:50 PM Meter: Publishing meter to broker: 2383
+2022-06-06 13:31:52 PM Meter: Publishing meter to broker: 1777
+2022-06-06 13:31:54 PM Meter: Publishing meter to broker: 3646
+2022-06-06 13:31:56 PM Meter: Publishing meter to broker: 5633
+2022-06-06 13:31:58 PM Meter: Publishing meter to broker: 4807
+2022-06-06 13:32:00 PM Meter: Publishing meter to broker: 2752
+2022-06-06 13:32:02 PM Meter: Publishing meter to broker: 8068
+2022-06-06 13:32:04 PM Meter: Publishing meter to broker: 6361
+2022-06-06 13:32:06 PM Meter: Publishing meter to broker: 2211
+2022-06-06 13:32:08 PM Meter: Publishing meter to broker: 3084
+2022-06-06 13:32:10 PM Meter: Publishing meter to broker: 5366
+2022-06-06 13:32:12 PM Meter: Publishing meter to broker: 6063

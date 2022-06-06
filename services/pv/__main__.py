@@ -1,6 +1,8 @@
 import logging
 import os
 import time
+from datetime import datetime
+from functools import wraps
 
 from pv.PV import Pv
 
@@ -17,13 +19,10 @@ def main():
     BROKER_PASSWORD = os.environ.get('BROKER_PASSWORD', 'guest')
     PV_MIN = int(os.environ.get('PV_MIN', 0))
     PV_MAX = int(os.environ.get('PV_MAX', 9000))
-    BROKER_INITIAL_DELAY = int(os.environ.get('BROKER_INITIAL_DELAY', 20))
     OUTPUT_FILE = os.environ.get('OUTPUT_FILE', 'output.csv')
     DELIMITER = os.environ.get('DELIMITER', ';')
     LOGFILE = os.environ.get('LOGFILE', './log/pv.log')
     ENVIRONMENT_PV = os.environ.get('ENVIRONMENT_PV', 'DEV')
-
-    time.sleep(BROKER_INITIAL_DELAY)
 
     pv = Pv(BROKER_HOST, BROKER_PORT, BROKER_QUEUE, BROKER_USERNAME, BROKER_PASSWORD, PV_MIN, PV_MAX, OUTPUT_FILE,
             DELIMITER, LOGFILE, ENVIRONMENT_PV)

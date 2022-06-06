@@ -40,7 +40,6 @@ All required parameters set in docker-compose.yml file.
 - PV_MIN - minimal power of meter (W)
 - PV_MAX - maximal power of meter (W)
 - PV_DELAY - interval between sending values of meter (s) 
-- BROKER_INITIAL_DELAY - initial delay of broker (s)
 - LOGFILE - name of log file
 - DELIMITER - delimiter of log file
 - OUTPUT_FILE - name of output file

@@ -4,10 +4,14 @@ ADD __main__.py /usr/src/pv/__main__.py
 ADD PV.py /usr/src/pv/PV.py
 ADD tests/test_PV.py /usr/src/pv/tests/test_PV.py
 ADD requirements.txt /usr/src
-
-
+ADD entrypoint.sh /usr/src/pv/entrypoint.sh
 WORKDIR /usr/src
 
 RUN pip install -r requirements.txt
+RUN apt-get update -yqq \
+  && apt-get install -yqq --no-install-recommends \
+    netcat \
+  && apt-get -q clean
 
-ENTRYPOINT ["python", "-m", "pv"]
+#ENTRYPOINT ["python", "-m", "pv"] \
+ENTRYPOINT ["sh", "/usr/src/pv/entrypoint.sh"]
