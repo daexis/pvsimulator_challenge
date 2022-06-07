@@ -1,0 +1,19 @@
+# Version 1.1 Changes
+1. Changed "Broker startup delay" procedure
+Now app didn't waiting to 20 seconds when the broker starts. App checking broker's open port and when port starts to listening, app starts simulation.
+Checking thru netcat utility from entrypoint bash script.
+
+2. Changed from "Realtime simulation" to once per minute simulation.
+Now app didn't waiting (sleeping) for next simulation iteration and generating new data without delay.
+ITERATION (sec.) value is spacing between two data simulations.
+QTY of simulations per day is 24*60*60/ITERATION.
+
+3. Changed output csv procedure.
+Now we are saving data to output file who contains daily values,
+so app generating several output files in format filename_dayXXX.csv.
+
+4. Added execution time of each day simulating.
+Meashure execution time from starting meter simulator up to saving final value from broker to output file.
+
+
+

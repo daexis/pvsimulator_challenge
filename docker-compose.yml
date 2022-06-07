@@ -17,7 +17,7 @@ services:
       - BROKER_PASSWORD=guest
       - PV_MIN=0
       - PV_MAX=9000
-      - PV_DELAY=2
+      - ITERATION=60
       - LOGFILE=./log/meter.log
     depends_on:
       - rabbitmq
@@ -43,6 +43,8 @@ services:
       - PV_MIN=0
       - PV_MAX=9000
       - LOGFILE=./log/pv.log
+      - MAX_EXECUTE_TIME=60
+      - EXECUTE_TIME_LOG=./log/execute_time.log
     depends_on:
       - rabbitmq
     links:

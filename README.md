@@ -39,7 +39,7 @@ All required parameters set in docker-compose.yml file.
 - BROKER_PASSWORD - password of broker (RabbitMQ)
 - PV_MIN - minimal power of meter (W)
 - PV_MAX - maximal power of meter (W)
-- PV_DELAY - interval between sending values of meter (s) 
+- ITERATION - interval where sending values from meter (s)
 - LOGFILE - name of log file
 - DELIMITER - delimiter of log file
 - OUTPUT_FILE - name of output file
