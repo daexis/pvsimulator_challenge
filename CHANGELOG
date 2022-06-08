@@ -12,7 +12,7 @@ QTY of simulations per day is 24*60*60/TIME_ITER.
 Now to output file saves data who contains daily values,
 so app generating several output files in format filename_dayXXX.csv.
 
-4. Added execution time of each day simulating.
+4. Added execution time checker of each simulating day.
 Meashures execution time from starting meter simulator up to saving final value to output file.
 Execution time is saved to file named "execution_time.log".
 
@@ -21,10 +21,10 @@ Execution time is saved to file named "execution_time.log".
 6. Added ploting of data from output file.
 
 7. For testing I used pytest framework.
-Added unittests for new functionality.
+Added unit tests for new functionality.
 
 8. Added "DEV" mode, so for testing should start "docker-compose -f docker-compose-dev.yml up --build"
-In DEV mode to dependencies added pytest.
+I've added to DEV mode pytest dependencies.
 
 
 

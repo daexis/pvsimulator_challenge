@@ -31,7 +31,7 @@ You should use Docker to run this project.
 
 **Configurations**:
 
-All required parameters set in docker-compose.yml file.
+All required parameters set in docker-compose.yml file. For "DEV" mode you can use docker-compose-dev.yml file.
 - BROKER_HOST  - hostname of broker (RabbitMQ)
 - BROKER_PORT  - port of broker (RabbitMQ)
 - BROKER_QUEUE - queue name of broker (RabbitMQ)
@@ -43,6 +43,17 @@ All required parameters set in docker-compose.yml file.
 - LOGFILE - name of log file
 - DELIMITER - delimiter of log file
 - OUTPUT_FILE - name of output file
+- TIME_ITER - value is spacing between two data simulations (s)
+- MAX_EXECUTE_TIME - if simulation time is more than this value, it will be noted in log file (s)
+- EXECUTE_TIME_LOG - log file name for execute time of each daily simulation 
+- PV_SUNRISE_START - sunrise start time (h) (got value from chart from main "homework" file)
+- PV_SUNRISE_END - sunrise end time (h) (got value from chart from main "homework" file)
+- PV_ZENITH - zenith time (h) (got value from chart from main "homework" file)
+- PV_SUNDOWN_START - sundown start time (h) (got value from chart from main "homework" file)
+- PV_SUNDOWN_END - sundown end time (h) (got value from chart from main "homework" file)
+- PV_LIGHT_EFF_LW - light efficiency of light in sunrise and sunset time
+- PV_LIGHT_EFF_STD - light efficiency of standard time
+- PV_MAX_POWER - maximal power of PV system (W)
 
 **Testing:**
 
