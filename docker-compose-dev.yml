@@ -5,11 +5,11 @@ services:
     hostname: meter
     build:
       context: ./services/meter
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     volumes:
       - './data/log:/usr/src/log'
     environment:
-      - ENVIRONMENT_PV=PROD
+      - ENVIRONMENT_PV=DEV
       - BROKER_HOST=rabbitmq
       - BROKER_PORT=5672
       - BROKER_QUEUE=meter_simulator
@@ -29,11 +29,11 @@ services:
     hostname: pv
     build:
       context: ./services/pv
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     volumes:
       - './data/log:/usr/src/log'
     environment:
-      - ENVIRONMENT_PV=PROD
+      - ENVIRONMENT_PV=DEV
       - BROKER_HOST=rabbitmq
       - BROKER_PORT=5672
       - BROKER_QUEUE=meter_simulator

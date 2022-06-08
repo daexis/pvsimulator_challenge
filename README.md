@@ -46,8 +46,8 @@ All required parameters set in docker-compose.yml file.
 
 **Testing:**
 
-Start project with "docker-compose -f docker-compose.yml up --build" and run unit tests of each application.
-Meret - "docker exec -ti meter python -m unittest meter/tests/test_Meter.py"
-PV Simulator - "docker exec -ti pv python -m unittest pv/tests/test_PV.py"
+Start project with "docker-compose -f docker-compose-dev.yml up --build" and run unit tests of each application.
+Meter - "docker exec -ti meter python -m pytest"
+PV Simulator - "docker exec -ti pv python -m pytest"
 
 

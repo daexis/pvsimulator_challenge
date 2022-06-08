@@ -4,21 +4,23 @@ import unittest
 import logging
 
 
-class testMeter(unittest.TestCase):
+class testMeter(unittest.TestCase, Meter):
     """
     Class for testing Meter.
     """
-    _broker_host = 'rabbitmq'
+    _environment_pv = "TEST"
+    _broker_host = "rabbitmq"
     _broker_port = '5672'
-    _broker_queue = 'meter_simulator_test'
-    _broker_username = 'guest'
-    _broker_password = 'guest'
-    _credentials = pika.PlainCredentials(_broker_username, _broker_password)
-    _logfile = "./log/tests.log"
+    _broker_queue = "meter_simulator_test"
+    _broker_username = "guest"
+    _broker_password = "guest"
     _pv_min = 0
     _pv_max = 9000
-    _pv_delay = 5
-    _environment_pv = "TEST"
+    _time_iter = 60
+    _logfile ="./log/tests.log"
+    _max_consume = 14
+
+    _credentials = pika.PlainCredentials(_broker_username, _broker_password)
 
     def test_connection(self):
         """
@@ -26,7 +28,7 @@ class testMeter(unittest.TestCase):
         :return:
         """
         try:
-            Meter._connect_broker(self)
+            self._connect_broker()
             self.assertTrue(True)
         except Exception:
             self.assertTrue(False)
@@ -37,8 +39,8 @@ class testMeter(unittest.TestCase):
         :return:
         """
         try:
-            channel = Meter._connect_broker(self)
-            Meter._publish_meter_to_broker(self, channel, "1234")
+            channel = self._connect_broker()
+            self._publish_meter_to_broker(channel, "1234")
             self.assertTrue(True)
         except Exception:
             self.assertTrue(False)
@@ -49,43 +51,20 @@ class testMeter(unittest.TestCase):
         :return:
         """
         try:
-            Meter._generate_meter(self, 2)
+            self._generate_meter(2)
             self.assertTrue(True)
         except Exception:
             self.assertTrue(False)
 
     def test_morning_strgt_meter(self):
-        """
-        Test generating morning's meter's value.
-        :return:
-        """
-        try:
-            Meter._morning_strgt_meter(self, 1)
-            self.assertTrue(True)
-        except Exception:
-            self.assertTrue(False)
+        assert self._morning_strgt_meter(0) == 0
 
     def test_evening_strgt_meter(self):
-        """
-        Test generating evening's meter's value.
-        :return:
-        """
-        try:
-            Meter._evening_strgt_meter(self, 1)
-            self.assertTrue(True)
-        except Exception:
-            self.assertTrue(False)
+        assert self._evening_strgt_meter(1) == 0
 
     def test_get_fraction_time(self):
-        """
-        Test getting fraction time.
-        :return:
-        """
-        try:
-            Meter._get_fraction_time(self, 1, 2, 3)
-            self.assertTrue(True)
-        except Exception:
-            self.assertTrue(False)
+        assert self._get_fraction_time(0) == 0
+        assert self._get_fraction_time(24) == 1
 
 if __name__ == "__main__":
     unittest.main()

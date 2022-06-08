@@ -184,9 +184,8 @@ class Pv:
         :return:
         """
         if ".csv" in self._output_file:
-            return self._output_file.split(".csv")[0] + "_day" + str(
-                meter_day) + ".csv"
-        return "day" + str(meter_day) + "_" + self._output_file
+            return f"{self._output_file.split('.csv')[0]}_day{meter_day}.csv"
+        return f"day{meter_day}_{self._output_file}"
 
     def _make_plot_filename(self, meter_day: int) -> str:
         """
@@ -194,9 +193,8 @@ class Pv:
         :return:
         """
         if ".csv" in self._output_file:
-            return self._output_file.split(".csv")[0] + "_day" + str(
-                meter_day) + ".png"
-        return "day" + str(meter_day) + "_" + self._output_file + ".png"
+            return f"{self._output_file.split('.csv')[0]}_day{meter_day}.png"
+        return f"day{meter_day}_{self._output_file}.png"
 
     def _write_to_output(self, meter_day: int, data_record: dict,
                          command_meter: str):
