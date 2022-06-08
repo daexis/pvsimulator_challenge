@@ -5,19 +5,20 @@ from random import randint
 
 import pika
 
+
 class Meter:
     """
-    Meter class simulates consumer meter. Class generates random value between
-    pv_min and pv_max (Watt) and publish value to broker.
+    Meter class simulates consumer meter. Class generates value between
+    pv_min and pv_max (Watt) and publishes value to broker.
     Should provide broker's host, port, queue, username, password.
-    Class publishes meter's value every pv_delay seconds.
+    Class publishes meter's value every time_iter seconds.
     """
 
     def __init__(self, broker_host: str, broker_port: int, broker_queue: str,
                  broker_username: str,
                  broker_password: str, pv_min: int, pv_max: int,
-                 iteration: int, logfile: str, environment_pv: str,
-                 delimiter: str):
+                 time_iter: int, logfile: str, environment_pv: str,
+                 delimiter: str, max_consume: int):
 
         self._logfile = logfile
         self._broker_host = broker_host
@@ -27,12 +28,13 @@ class Meter:
         self._broker_password = broker_password
         self._pv_min = pv_min
         self._pv_max = pv_max
-        self._iteration = iteration
-        self._total_iterations = 24 * 60 * 60 / self._iteration
+        self._time_iter = time_iter
+        self._total_iterations = 24 * 60 * 60 / self._time_iter
         self._credentials = pika.PlainCredentials(self._broker_username,
                                                   self._broker_password)
         self._environment_pv = environment_pv
         self._delimiter = delimiter
+        self._max_consume = max_consume
         logging.basicConfig(filename=logfile, filemode="a", level=logging.INFO,
                             format='%(asctime)s %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%S %p')
@@ -82,7 +84,6 @@ class Meter:
                         data_to_send = f"DATA::{self._make_string_to_broker(meter)}"
                         self._publish_meter_to_broker(channel, data_to_send)
                         self._current_iteration += 1
-                        # time.sleep(self._pv_delay)
                     except KeyboardInterrupt:
                         logging.info("Meter: Exiting meter simulator")
                         break
@@ -98,21 +99,47 @@ class Meter:
 
     def _generate_meter(self, current_iteration: int) -> int:
         """
-        Generates random value between pv_min and pv_max (Watt)
+        Generates value between pv_min and pv_max (Watt)
         """
-        return randint(self._pv_min, self._pv_max)
+        time = self._get_fraction_time(0, 0,
+                                       current_iteration * self._time_iter)
+        if current_iteration <= self._max_consume * 60:
+            meter_value = int(self._morning_strgt_meter(time))
+        else:
+            meter_value = int(self._evening_strgt_meter(time))
+        if meter_value < self._pv_min:
+            meter_value = self._pv_min
+        elif meter_value > self._pv_max:
+            meter_value = self._pv_max
+        return meter_value
+
+    def _morning_strgt_meter(self, x: float) -> float:
+        A = self._pv_max * 0.75 / (self._get_fraction_time(
+            randint(self._max_consume - 2,
+                    self._max_consume + 2)))
+        return A * x
+
+    def _evening_strgt_meter(self, x: float) -> float:
+        A = (-self._pv_max * 0.75) / (
+                1 - self._get_fraction_time(
+            randint(self._max_consume - 2, self._max_consume + 2)))
+        B = A * -1
+        return A * x + B
+
+    def _get_fraction_time(self, hour: int, minute: int = 0,
+                           second: int = 0) -> float:
+        """Convert time to fraction of the day"""
+        return ((hour * 3600 + minute * 60) + second) / (24 * 3600)
 
     def _make_string_to_broker(self, meter: int) -> str:
-        """
-        Makes string to broker.
-        """
+
         return f"{self._current_day}{self._delimiter}" \
                f"{self._current_iteration}{self._delimiter}" \
                f"{meter}"
 
     def _publish_meter_to_broker(self, channel, data_to_send: str):
         """
-        Publishes value to broker.
+        Publishes simulated value to broker.
         """
         logging.info("Meter: Publishing meter to broker: %s", data_to_send)
         try:

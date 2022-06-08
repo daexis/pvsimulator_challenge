@@ -17,8 +17,9 @@ services:
       - BROKER_PASSWORD=guest
       - PV_MIN=0
       - PV_MAX=9000
-      - ITERATION=60
+      - TIME_ITER=60
       - LOGFILE=./log/meter.log
+      - MAX_CONSUME=14
     depends_on:
       - rabbitmq
     links:
@@ -43,8 +44,17 @@ services:
       - PV_MIN=0
       - PV_MAX=9000
       - LOGFILE=./log/pv.log
+      - TIME_ITER=60
       - MAX_EXECUTE_TIME=60
       - EXECUTE_TIME_LOG=./log/execute_time.log
+      - PV_SUNRISE_START=6
+      - PV_SUNRISE_END=8
+      - PV_ZENITH=14
+      - PV_SUNDOWN_START=20
+      - PV_SUNDOWN_END=21
+      - PV_LIGHT_EFF_LW=0.1
+      - PV_LIGHT_EFF_STD=0.8125
+      - PV_MAX_POWER=9000
     depends_on:
       - rabbitmq
     links:

@@ -49,11 +49,43 @@ class testMeter(unittest.TestCase):
         :return:
         """
         try:
-            Meter._generate_meter(self)
+            Meter._generate_meter(self, 2)
             self.assertTrue(True)
         except Exception:
             self.assertTrue(False)
 
+    def test_morning_strgt_meter(self):
+        """
+        Test generating morning's meter's value.
+        :return:
+        """
+        try:
+            Meter._morning_strgt_meter(self, 1)
+            self.assertTrue(True)
+        except Exception:
+            self.assertTrue(False)
+
+    def test_evening_strgt_meter(self):
+        """
+        Test generating evening's meter's value.
+        :return:
+        """
+        try:
+            Meter._evening_strgt_meter(self, 1)
+            self.assertTrue(True)
+        except Exception:
+            self.assertTrue(False)
+
+    def test_get_fraction_time(self):
+        """
+        Test getting fraction time.
+        :return:
+        """
+        try:
+            Meter._get_fraction_time(self, 1, 2, 3)
+            self.assertTrue(True)
+        except Exception:
+            self.assertTrue(False)
 
 if __name__ == "__main__":
     unittest.main()
