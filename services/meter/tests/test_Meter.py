@@ -17,7 +17,7 @@ class testMeter(unittest.TestCase, Meter):
     _pv_min = 0
     _pv_max = 9000
     _time_iter = 60
-    _logfile ="./log/tests.log"
+    _logfile = "./log/tests.log"
     _max_consume = 14
 
     _credentials = pika.PlainCredentials(_broker_username, _broker_password)
@@ -65,6 +65,7 @@ class testMeter(unittest.TestCase, Meter):
     def test_get_fraction_time(self):
         assert self._get_fraction_time(0) == 0
         assert self._get_fraction_time(24) == 1
+
 
 if __name__ == "__main__":
     unittest.main()

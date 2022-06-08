@@ -148,7 +148,8 @@ class Pv:
                 f"Execution time of {filename}: {execution_time} seconds\n")
             if execution_time > self._max_execute_time:
                 logging.info(
-                    f"PV: Execution time of {filename} is too long: {execution_time} seconds")
+                    f"PV: Execution time of {filename} is too long:"\
+                        f"{execution_time} seconds")
             data_file.close()
         ch.basic_ack(delivery_tag=method.delivery_tag)
 

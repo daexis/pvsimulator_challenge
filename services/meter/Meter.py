@@ -81,7 +81,8 @@ class Meter:
                 while self._current_iteration <= self._total_iterations:
                     try:
                         meter = self._generate_meter(self._current_iteration)
-                        data_to_send = f"DATA::{self._make_string_to_broker(meter)}"
+                        data_to_send = f"DATA::"\
+                                f"{self._make_string_to_broker(meter)}"
                         self._publish_meter_to_broker(channel, data_to_send)
                         self._current_iteration += 1
                     except KeyboardInterrupt:

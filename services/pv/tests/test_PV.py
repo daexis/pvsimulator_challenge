@@ -16,14 +16,14 @@ class testPv(unittest.TestCase, Pv):
     _broker_queue = "meter_simulator_test"
     _broker_username = "guest"
     _broker_password = "guest"
-    _output_file ="./log/output_test.csv"
-    _delimiter =";"
+    _output_file = "./log/output_test.csv"
+    _delimiter = ";"
     _pv_min = 0
     _pv_max = 9000
-    _logfile ="./log/pv_log.log"
+    _logfile = "./log/pv_log.log"
     _time_iter = 60
     _max_execute_time = 60
-    _execute_time_log ="./log/execute_time_test.log"
+    _execute_time_log = "./log/execute_time_test.log"
     _pv_sunrise_start = 6
     _pv_sunrise_end = 8
     _pv_zenith = 14
@@ -52,7 +52,7 @@ class testPv(unittest.TestCase, Pv):
         :return:
         """
         try:
-            self._generate_pv_value(1,1)
+            self._generate_pv_value(1, 1)
             self.assertTrue(True)
         except Exception:
             self.assertTrue(False)
@@ -103,6 +103,7 @@ class testPv(unittest.TestCase, Pv):
 
     def test_parabola(self):
         assert self._parabola(0) == -17800.0
+
 
 if __name__ == "__main__":
     unittest.main()
